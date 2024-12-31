@@ -107,6 +107,18 @@ header .banner-section video {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -2;
+}
+
+/* Add a semi-transparent overlay */
+header .banner-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
   z-index: -1;
 }
 
@@ -117,27 +129,30 @@ header .banner-section .header-content {
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Add a subtle shadow to the text */
 }
 
 header .banner-section .header-content h2 {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 header .banner-section .header-content h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin: 15px 0;
+  font-weight: bold;
 }
 
 header .banner-section .header-content p {
   font-size: 18px;
-  margin: 15px 0;
+  margin: 20px 0;
   line-height: 1.6;
+  color: #fff8f3;
 }
 
 header .banner-section .header-content .button-section button {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   font-size: 16px;
   font-weight: 600;
   border-radius: 5px;
@@ -192,36 +207,142 @@ header .banner-section .header-content .button-section .download:hover {
 
 /* what i do part */
 
-.what-do > p {
-  width: 80%;
-  margin: auto;
-  padding: 40px 0;
+/* General Styling */
+.my-services {
+  padding: 40px 20px;
+  text-align: center;
 }
-.what-do .what-do-container {
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.my-services .icon{
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.my-services .icon img{
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* my-services section styling */
+.my-services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Video Sections */
+.video-sections {
+  display: flex; /* Side-by-side layout */
   justify-content: space-between;
+  gap: 20px;
+  margin: auto;
+  width: 90%;
 }
-.what-do .what-do-container .box {
-  width: 200px;
+
+.video-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%; /* Adjust width for equal space */
+  text-align: left;
+}
+
+.video-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.video-section p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.view-all {
+  background-color: #fd6e0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
-  padding: 30px;
+  transition: all 0.3s ease;
 }
-.what-do .what-do-container .box img {
-  width: 44px;
-  height: 44px;
+
+.view-all:hover {
+  background-color: #ff8a3c;
 }
-.what-do .what-do-container .box h3 {
-  color: #181818;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  margin: 10px 0;
+
+/* Popup Styling (as before) */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
 }
-.what-do .what-do-container .box p {
-  color: #757575;
-  font-weight: 400;
-  line-height: 28px;
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-content .video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.popup-content video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
 }
 
 /* My resume section */

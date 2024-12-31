@@ -90,77 +90,128 @@
           <div class="contact-part">
             <div class="name">
               <p>Name:</p>
-              <h3>Mary Hardy</h3>
+              <h3>Ayushi Das</h3>
             </div>
 
             <div class="email">
               <p>Email:</p>
-              <h3>info@gmail.com</h3>
+              <h3>brishtydas24@gmail.com</h3>
             </div>
 
             <div class="email">
-              <p>Date of birth:</p>
-              <h3>11 November 1987</h3>
+              <p>Start Working:</p>
+              <h3>11 November 2020</h3>
             </div>
 
             <div class="email">
               <p>From:</p>
-              <h3>Los Angeles, USA</h3>
+              <h3>Bangladesh</h3>
             </div>
           </div>
         </div>
       </section>
 
       <!-- What I Do section -->
-      <section class="what-do">
-        <h1 class="section-title">What I do</h1>
+      <section class="my-services">
+        <h1 class="section-title">My Services</h1>
         <p class="section-description">
-          I have more than 10 years experience building software for clients all
-          over the world. Below is a quick overview of my main technical skill
-          sets and technologies i use. Want to find out more about my
-          experience? Check out my online resume and project portfolio.
+          As a professional video editor, I bring your vision to life with
+          creative precision. Whether you're looking to captivate your audience
+          with short-form videos or share compelling stories through vlogs, I
+          provide high-quality video editing tailored to your needs.
+          <br /><br />
+          From editing social media reels and promotional clips to crafting
+          immersive vlogs, my services are designed to make your content stand
+          out. Let's collaborate to create visuals that inspire and engage.
         </p>
-
-        <div class="what-do-container">
-          <div class="box">
-            <img src="./assets/img/icons/js.png" alt="JavaScript" />
-            <h3>Vanilla JavaScript</h3>
+        <div class="icon">
+          <img src="/assets/img/icons/after-effects.png" alt="">
+          <img src="/assets/img/icons/premiere-pro.png" alt="">
+          <img src="/assets/img/icons/photoshop.png" alt="">
+          <img src="/assets/img/icons/illustrator.png" alt="">
+        </div>
+        <div class="video-sections">
+          <!-- Short-form Video Section -->
+          <div class="video-section">
+            <h2>Short-form Videos</h2>
             <p>
-              List skill/technologies here. You can change the icon above to any
-              of the 1500+ FontAwesome 5 free icons available. Aenean commodo
-              ligula eget dolor.
+              Short-form videos are designed to grab attention and convey a
+              message quickly. Ideal for social media, ads, and promotional
+              content, these videos highlight creativity and precision.
             </p>
+            <button class="btn view-all" onclick="openPopup('shortFormPopup')">
+              View All Videos
+            </button>
           </div>
 
-          <div class="box">
-            <img src="./assets/img/icons/react.png" alt="JavaScript" />
-            <h3>React</h3>
+          <!-- Vlogs Section -->
+          <div class="video-section">
+            <h2>Vlogs</h2>
             <p>
-              List skill/technologies here. You can change the icon above to any
-              of the 1500+ FontAwesome 5 free icons available. Aenean commodo
-              ligula eget dolor.
+              Vlogs bring personal stories to life with a unique narrative
+              style. These videos showcase journeys, experiences, and creative
+              perspectives, perfect for connecting with your audience.
             </p>
-          </div>
-          <div class="box">
-            <img src="./assets/img/icons/nodejs.png" alt="JavaScript" />
-            <h3>Node.js</h3>
-            <p>
-              List skill/technologies here. You can change the icon above to any
-              of the 1500+ FontAwesome 5 free icons available. Aenean commodo
-              ligula eget dolor.
-            </p>
-          </div>
-          <div class="box">
-            <img src="./assets/img/icons/mongo.png" alt="JavaScript" />
-            <h3>MongoDB</h3>
-            <p>
-              List skill/technologies here. You can change the icon above to any
-              of the 1500+ FontAwesome 5 free icons available. Aenean commodo
-              ligula eget dolor.
-            </p>
+            <button class="btn view-all" onclick="openPopup('vlogsPopup')">
+              View All Videos
+            </button>
           </div>
         </div>
       </section>
+
+      <!-- Short-form Videos Popup -->
+      <div id="shortFormPopup" class="popup-overlay">
+        <div class="popup-content">
+          <span class="close-popup" onclick="closePopup('shortFormPopup')"
+            >&times;</span
+          >
+          <h2>Short-form Videos</h2>
+          <div class="video-grid">
+            <div class="video-card">
+              <video controls>
+                <source src="/assets/video/short1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Short Video 1</p>
+            </div>
+            <div class="video-card">
+              <video controls>
+                <source src="/assets/video/short2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Short Video 2</p>
+            </div>
+            <!-- Add more videos -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Vlogs Popup -->
+      <div id="vlogsPopup" class="popup-overlay">
+        <div class="popup-content">
+          <span class="close-popup" onclick="closePopup('vlogsPopup')"
+            >&times;</span
+          >
+          <h2>Vlogs</h2>
+          <div class="video-grid">
+            <div class="video-card">
+              <video controls>
+                <source src="/assets/video/vlog1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Vlog 1</p>
+            </div>
+            <div class="video-card">
+              <video controls>
+                <source src="/assets/video/vlog2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p>Vlog 2</p>
+            </div>
+            <!-- Add more videos -->
+          </div>
+        </div>
+      </div>
 
       <!-- My Resume -->
       <section class="my-resume">
@@ -275,4 +326,27 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    // Function to open the popup
+    function openPopup(popupId) {
+      document.getElementById(popupId).style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup(popupId) {
+      document.getElementById(popupId).style.display = "none";
+    }
+
+    // Close popup when clicking outside the content
+    window.onclick = function (event) {
+      const shortFormPopup = document.getElementById("shortFormPopup");
+      const vlogsPopup = document.getElementById("vlogsPopup");
+      if (event.target === shortFormPopup) {
+        shortFormPopup.style.display = "none";
+      } else if (event.target === vlogsPopup) {
+        vlogsPopup.style.display = "none";
+      }
+    };
+  </script>
 </html>
