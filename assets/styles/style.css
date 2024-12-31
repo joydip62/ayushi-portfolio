@@ -1,0 +1,317 @@
+@import "./all.min.css";
+
+/* global css */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+section {
+  width: 1140px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+.btn {
+  border-radius: 5px;
+  background: #fd6e0a;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 35px;
+}
+p {
+  color: #757575;
+}
+.center {
+  text-align: center;
+}
+.section-title {
+  color: #181818;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.section-description {
+  color: #757575;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* header css */
+
+/* nav bar style */
+header .header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+header .header nav h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  color: #333;
+}
+
+header .header nav span {
+  color: #fd6e0a;
+}
+
+header .header nav .nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .header nav .nav-bar li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header .header nav .nav-bar li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+header .header nav .nav-bar li button {
+  font-size: 18px;
+  background-color: #fd6e0a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .banner-section {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+header .banner-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header .banner-section .header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+header .banner-section .header-content h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+header .banner-section .header-content h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+header .banner-section .header-content p {
+  font-size: 18px;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+header .banner-section .header-content .button-section button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header .banner-section .header-content .button-section .contact {
+  background-color: transparent;
+  color: #fd6e0a;
+  border: 1px solid #fd6e0a;
+}
+
+header .banner-section .header-content .button-section .contact:hover {
+  background-color: #fd6e0a;
+  color: #fff;
+}
+
+header .banner-section .header-content .button-section .download {
+  background-color: #fd6e0a;
+  color: #fff;
+  border: none;
+}
+
+header .banner-section .header-content .button-section .download:hover {
+  background-color: #ff8a3c;
+}
+
+/* About section  */
+.about {
+  height: 550px;
+  border-radius: 10px;
+  background: #fff8f3;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .about-container > p {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+.about .contact-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .contact-part div {
+  width: 20%;
+}
+
+/* what i do part */
+
+.what-do > p {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+.what-do .what-do-container {
+  display: flex;
+  justify-content: space-between;
+}
+.what-do .what-do-container .box {
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+}
+.what-do .what-do-container .box img {
+  width: 44px;
+  height: 44px;
+}
+.what-do .what-do-container .box h3 {
+  color: #181818;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.what-do .what-do-container .box p {
+  color: #757575;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* My resume section */
+.my-resume .resume-container {
+  display: flex;
+  gap: 50px;
+}
+.my-resume .resume-container .resume-colum {
+  padding-top: 30px;
+}
+.my-resume .resume-container .resume-colum h2 {
+  padding: 20px 0;
+  color: var(--dark-02, #474747);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.my-resume .resume-container .resume-colum .resume-item {
+}
+.my-resume .resume-container .resume-colum .resume-item h3 {
+  color: var(--dark-02, #474747);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.my-resume .resume-container .resume-colum .resume-item h4 {
+  color: var(--dark-03, #757575);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 20px 0;
+}
+.my-resume .resume-container .resume-colum .resume-item p {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.my-resume .resume-container .resume-colum .resume-item hr {
+  margin: 30px;
+}
+
+.my-resume .download-cv {
+  margin: 50px 0;
+  text-align: center;
+}
+
+/* footer start */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff8f3;
+  padding: 150px;
+}
+footer .contact {
+  width: 500px;
+}
+footer h2 {
+  color: var(--dark-01, #181818);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+footer .contact p {
+  color: var(--dark-02, #474747);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 20px 0;
+}
+footer .message input,
+textarea {
+  display: block;
+  margin: 20px 0;
+  width: 461px;
+  border-radius: 5px;
+  background: var(--white-color, #fff);
+  border: none;
+  color: var(--dark-03, #757575);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 15px;
+}
+footer .message button {
+  display: block;
+  margin: 20px 0;
+}
